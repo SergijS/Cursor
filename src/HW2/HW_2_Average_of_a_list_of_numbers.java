@@ -1,5 +1,4 @@
 package HW2;
-
 public class HW_2_Average_of_a_list_of_numbers {
     public static void main(String[] args) {
 
