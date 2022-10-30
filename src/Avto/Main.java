@@ -19,7 +19,6 @@ public class Main {
         owner.age = 25;
         owner.printCarOwner();
 
-
         Car car = new Car();
         car.setCarBrand("Suzuki");
         car.setColor("Red");
@@ -30,15 +29,11 @@ public class Main {
         car.setColor("Grey");
         car.setMaxSpeed(490.40);
 
-
         car.carOwner(owner);
         car2.carOwner(owner);
 
         owner.hello();
 
-
-
         System.out.println("Owner has "+ Car.ownerHasCars + " cars");
-
     }
 }

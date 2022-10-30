@@ -1,7 +1,6 @@
 package Avto;
 
 public class Car implements NameInfo {
-
     private String carBrand;
     private String color;
     private  double maxSpeed;
@@ -10,15 +9,12 @@ public class Car implements NameInfo {
     public void getNameInfo(){
         System.out.println("Car brand is " + this.carBrand);
     }
-
     public void setCarBrand(String carBrand) {
         this.carBrand = carBrand;
     }
-
     public void setColor(String color) {
         this.color = color;
     }
-
     public void setMaxSpeed(double maxSpeed) {
         this.maxSpeed = maxSpeed;
     }
@@ -34,13 +30,11 @@ public class Car implements NameInfo {
     public double getMaxSpeed() {
         return maxSpeed;
     }
-
     public void  carOwner (CarOwner CarOwner){
         this.CarOwner = CarOwner;
         ownerHasCars++;
         this.carBrand = carBrand;
     }
-
     public static int ownerHasCars;
 
     public void hello(CarOwner CarOwner){
@@ -55,7 +49,6 @@ public class Car implements NameInfo {
         System.out.println("Hello shareholders, how are you?");
     }
 
-
     @Override
     public String toString() {
         return "Car{" +
@@ -66,4 +59,3 @@ public class Car implements NameInfo {
                 '}';
     }
     }
-

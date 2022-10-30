@@ -9,10 +9,4 @@ public abstract class Owner implements NameInfo{
         System.out.println("Firstname is " + this.firstName);
     }
     public abstract void hello();
-
-
-
-
-
-
 }

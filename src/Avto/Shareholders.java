@@ -6,11 +6,9 @@ public class Shareholders extends Owner{
     public double getEquityShare() {
         return equityShare;
     }
-
     public void setEquityShare(double equityShare) {
         this.equityShare = equityShare;
     }
-
     @Override
     public void hello() {
        System.out.println("Hello Shareholders, how are you?");
