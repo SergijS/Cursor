@@ -22,7 +22,7 @@ public class Car {
         return brand;
     }
 
-    public void setBrand(Brand brand, Brand audi) {
+    public void setBrand(Brand brand) {
         this.brand = brand;
     }
 
@@ -72,8 +72,26 @@ public class Car {
     public enum Brand {
         TESLA, AUDI, BMW, TOYOTA, NISSAN;
 
-        public static Brand RandomCarGenerator() {
+        public static Brand randomCarGenerator() {
             return values()[(int) (Math.random() * values().length)];
         }
+    }
+
+    public static int randomCarYear() {
+        int year1 = 2000;
+        int year2 = 2022;
+        return year1 + (int) Math.round(Math.random() * (year2 - year1));
+    }
+
+    public static int randomCarMileage() {
+        int mileage1 = 15000;
+        int mileage2 = 350000;
+        return mileage1 + (int) Math.round(Math.random() * (mileage2 - mileage1));
+    }
+
+    public static int randomCarPrice() {
+        int price1 = 350000;
+        int price2 = 2100000;
+        return price1 + (int) Math.round(Math.random() * (price2 - price1));
     }
 }

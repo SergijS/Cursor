@@ -11,15 +11,16 @@ import static HW9.Car.Brand.TESLA;
 public class MainCar {
     public static void main(String[] args) {
         List<Car> cars = Arrays.asList(
-                new Car(UUID.randomUUID(), Car.Brand.RandomCarGenerator(), 2018, 122547, 301125),
-                new Car(UUID.randomUUID(), Car.Brand.RandomCarGenerator(), 2015, 39878, 456987),
-                new Car(UUID.randomUUID(), Car.Brand.RandomCarGenerator(), 2021, 38054, 521454),
-                new Car(UUID.randomUUID(), Car.Brand.RandomCarGenerator(), 2022, 25400, 787454),
-                new Car(UUID.randomUUID(), Car.Brand.RandomCarGenerator(), 2014, 225478, 311254)
+                new Car(UUID.randomUUID(), Car.Brand.randomCarGenerator(), Car.randomCarYear(), Car.randomCarMileage(), Car.randomCarPrice()),
+                new Car(UUID.randomUUID(), Car.Brand.randomCarGenerator(), Car.randomCarYear(), Car.randomCarMileage(), Car.randomCarPrice()),
+                new Car(UUID.randomUUID(), Car.Brand.randomCarGenerator(), Car.randomCarYear(), Car.randomCarMileage(), Car.randomCarPrice()),
+                new Car(UUID.randomUUID(), Car.Brand.randomCarGenerator(), Car.randomCarYear(), Car.randomCarMileage(), Car.randomCarPrice()),
+                new Car(UUID.randomUUID(), Car.Brand.randomCarGenerator(), Car.randomCarYear(), Car.randomCarMileage(), Car.randomCarPrice())
         );
 
+
         List<Car> filterTeslaAudi = cars.stream()
-                .filter(car -> car.getBrand() == TESLA || car.getBrand() == AUDI)
+                .filter(car -> car.getBrand().equals(TESLA) || car.getBrand().equals(AUDI))
                 .collect(Collectors.toList());
         System.out.println("Only TESLA and AUDI cars");
         System.out.println(filterTeslaAudi);
